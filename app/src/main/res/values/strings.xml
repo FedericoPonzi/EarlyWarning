@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EarlyWarning</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_second">Consigli</string>
+    <string name="title_activity_sos">SOSActivity</string>
+    <string name="action_fine">Sto bene!</string>
+    <string name="title_activity_alert_friends">Chiedi soccorso specifico:</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

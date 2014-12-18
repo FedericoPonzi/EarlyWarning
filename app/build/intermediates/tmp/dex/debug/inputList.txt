@@ -1,0 +1,7 @@
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\classes\debug
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-233a78d4fd85c07576922c6abba49c6e9580d3d9.jar
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\pre-dexed\debug\classes-267487b40dae29123d8b9f5d101137081f975633.jar
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-01cfcffd6d5ae18019f7ed19da2b3a09d8d6b1c0.jar
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\pre-dexed\debug\classes-2d189743805656321259cbec5641a3dd13854c06.jar
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\pre-dexed\debug\classes-8f05915e007723944520fcee3697932b930cece4.jar
+C:\Users\FedericoPonzi\Dropbox\Federico Ponzi\Programmazione\Java\Android\AndroidStudio\EarlyWarning\app\build\intermediates\pre-dexed\debug\classes-1ca3a7023469feaa45f21552c631029a27528f0e.jar
