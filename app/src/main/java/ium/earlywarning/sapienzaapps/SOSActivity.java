@@ -1,4 +1,4 @@
-package ium.earlywarning;
+package ium.earlywarning.sapienzaapps;
 
 import android.annotation.TargetApi;
 import android.content.Intent;

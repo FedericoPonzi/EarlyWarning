@@ -1,4 +1,4 @@
-package ium.earlywarning;
+package ium.earlywarning.sapienzaapps;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,7 +1,6 @@
-package ium.earlywarning.widget;
+package ium.earlywarning.sapienzaapps.widget;
 
 
-import ium.earlywarning.R;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +9,8 @@ import android.graphics.Movie;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
+
+import ium.earlywarning.sapienzaapps.R;
 
 
 /**

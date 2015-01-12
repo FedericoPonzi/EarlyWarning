@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">EarlyWarning</string>
+    <string name="title_activity_main">Informazioni Terremoto</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_second">Consigli</string>
     <string name="title_activity_sos">SOSActivity</string>

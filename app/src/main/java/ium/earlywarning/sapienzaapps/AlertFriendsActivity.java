@@ -1,7 +1,8 @@
-package ium.earlywarning;
+package ium.earlywarning.sapienzaapps;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+
 
 public class AlertFriendsActivity extends ActionBarActivity {
 
