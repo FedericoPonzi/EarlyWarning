@@ -233,7 +233,7 @@ public class SecondActivity extends ActionBarActivity
     {
 
         private TextView oldTextViewClicked;
-        private static int section = 0;
+        private int section = 0;
         /**
          * The fragment argument representing the section number for this
          * fragment.
@@ -262,30 +262,39 @@ public class SecondActivity extends ActionBarActivity
         {
             final View rootView = inflater.inflate(R.layout.fragment_second,
                                                    container, false);
-
-            Bundle args = getArguments();
-            final Integer[] gifIDs;
-            section = args.getInt(ARG_SECTION_NUMBER);
-            switch (args.getInt(ARG_SECTION_NUMBER))
-            {
-                case 1:
-                    gifIDs = new Integer[]{
-                            R.drawable.lol1, R.drawable.lol2, R.drawable.lol3,
-                            R.drawable.lol4};
-                    break;
-                case 2:
-                    gifIDs = new Integer[]{
-                            R.drawable.lol1};
-                    break;
-                default:
-                    gifIDs = new Integer[]{R.drawable.pic1, R.drawable.pic2};
-            }
-
             TextView suggestion = (TextView) rootView
                     .findViewById(R.id.consiglio_tv);
-            suggestion.setText(getSuggestion(0));
-
+            GIFView gifView = (GIFView) rootView
+                    .findViewById(R.id.main_gif);
             Button sosBtn = (Button) rootView.findViewById(R.id.sos_btn);
+            LinearLayout linearLayout = (LinearLayout) rootView
+                    .findViewById(R.id.thumb_linearlayout);
+            Bundle args = getArguments();
+            final Integer[] gifIDs;
+
+            section = args.getInt(ARG_SECTION_NUMBER);
+
+            Log.i(LOG_TAG, "Sect:" + section);
+
+            switch (section)
+            {
+                case 1: //CHIUSO
+                    gifIDs = new Integer[]{
+                            R.drawable.chiuso1, R.drawable.chiuso2, R.drawable.chiuso3,
+                            R.drawable.chiuso4};
+                    break;
+                case 2: // APERTO
+                    gifIDs = new Integer[]{
+                            R.drawable.aperto1};
+                    break;
+                default:
+                    gifIDs = new Integer[]{};
+            }
+
+            //Imposto il primo gif e suggerimento:
+            suggestion.setText(getSuggestion(0));
+            gifView.setMovieResource(gifIDs[0]);
+
             sosBtn.setOnClickListener(new OnClickListener()
             {
                 @Override
@@ -296,9 +305,9 @@ public class SecondActivity extends ActionBarActivity
                 }
             });
 
-            LinearLayout linearLayout = (LinearLayout) rootView
-                    .findViewById(R.id.thumb_linearlayout);
 
+
+            //Cambia il colore della textview quando viene cliccata:
             OnClickListener textViewOnClickListener = new OnClickListener()
             {
                 @Override
@@ -320,6 +329,8 @@ public class SecondActivity extends ActionBarActivity
                 }
             };
 
+
+            // Mi creo la lista di numeri per scorrere fra i consigli:
             int i = 0;
             for (int id : gifIDs)
             {
@@ -333,50 +344,55 @@ public class SecondActivity extends ActionBarActivity
                 }
                 tv.setText(i + "");
                 i++;
-                // GIFView gv = (GIFView) inflater.inflate(R.layout.thumb_gif,
-                // null);
-                // gv.setMovieResource(id);
-                // gv.setOnClickListener(gifOnClickListener);
+
+
                 tv.setOnClickListener(textViewOnClickListener);
                 linearLayout.addView(tv);
-
+                //Spacer fra i numeri:
                 TextView spacer = new TextView(getActivity());
                 spacer.setLayoutParams(new LayoutParams(4, 2));
                 spacer.setText(" ");
                 linearLayout.addView(spacer);
-
             }
             return rootView;
         }
 
         private String getSuggestion(int suggestion)
         {
-            if (section == 1)
+            Log.i(LOG_TAG, "Section:" + section);
+            if (section == 1) // CHIUSO
             {
                 switch (suggestion)
                 {
                     case 0:
-                        return "Durante un terremoto potrebbe essere utile addestrare il proprio merlo a imboccare i vostri animali domestici fino all' arrivo dei soccorsi.";
+                        return "sotto il tavolo 1";
                     case 1:
-                        return "qualcosa!";
+                        return "niente panico";
                     case 2:
-                        return "altro";
+                        return "sotto al tavolo vero";
+                    case 3:
+                        return "sotto il tavolo 2";
+                    case 4:
+                        return "non chiamare";
                     default:
                         return "SCAPPAAAAAAAA";
                 }
             }
-            else
+            else //APERTO
             {
                 switch (suggestion)
                 {
                     case 0:
-                        return "Durante un terremoto potrebbe essere utile addestrare il proprio merlo a imboccare i vostri animali domestici fino all' arrivo dei soccorsi.";
+                        return "vai lontano da cose che possono cadere";
                     case 1:
-                        return "qualcosa!";
+                        return "no sotto i ponti";
                     case 2:
-                        return "altro";
+                        return "lascia la strada libera per i soccorsi";
+                    case 3:
                     default:
-                        return "SCAPPAAAAAAAA";
+                        return "vai lontano da cose che possono cadere";
+
+
                 }
             }
         }
